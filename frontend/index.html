@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Developer Onboarding Agent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar: Checklist / Persona info -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Onboarding Status</h2>
+            <div id="persona-display" class="persona-section empty">
+                <h3>Developer Profile</h3>
+                <p id="profile-text">Pending detection...</p>
+                <ul id="persona-list">
+                    <li><strong>Name:</strong> <span id="p-name">?</span></li>
+                    <li><strong>Role:</strong> <span id="p-role">?</span></li>
+                    <li><strong>Level:</strong> <span id="p-exp">?</span></li>
+                    <li><strong>Stack:</strong> <span id="p-stack">?</span></li>
+                </ul>
+            </div>
+            <div class="checklist-section">
+                <h3>My Tasks</h3>
+                <ul id="task-list" class="task-list">
+                    <li class="empty-task">No tasks generated yet.</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <h1>HR & DevRel Assistant</h1>
+                <span class="status-indicator"></span>
+            </header>
+
+            <div id="chat-box" class="chat-box">
+                <!-- Messages will appear here -->
+                <div class="message system-msg">
+                    <div class="avatar ai-avatar">🤖</div>
+                    <div class="bubble">
+                        Welcome to the team! I'm your Onboarding Assistant. To get started, could you tell me a little about yourself (Name, Role, Experience level, and Primary Tech Stack)?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <form id="chat-form">
+                    <input type="text" id="message-input" placeholder="Type your message here..." autocomplete="off" required>
+                    <button type="submit" id="send-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mark the script as markdown parser for code blocks -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
